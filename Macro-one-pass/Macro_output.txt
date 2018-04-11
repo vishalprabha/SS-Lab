@@ -1,0 +1,6 @@
+SAMPLE	START	1000
+-	-	LDA	&A
+-	STA	&B
+N1	RESW	1
+N2	RESW	1
+-	END	-
