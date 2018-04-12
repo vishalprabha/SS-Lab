@@ -4,7 +4,7 @@
 @Lab: System Software Lab
 Code Given by Mam
 **************************
-Note: Incase of error in lab execute : $ g++ --std=c++11 Pass_one_assembler.cpp
+Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass.cpp
 */
 
 

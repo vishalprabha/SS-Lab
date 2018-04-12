@@ -4,7 +4,7 @@
 @Lab: System Software Lab
 Version 2.0 Improved from the code of Niranjan-Ananth
 **************************
-Note: Incase of error in lab execute : $ g++ --std=c++11 Pass_one_assembler.cpp
+Note: Incase of error in lab execute : $ g++ --std=c++11 Relocation_loader.cpp
 */
 
 
@@ -18,7 +18,7 @@ int main(){
     int a;
     string s;
     cout<<"Enter the starting address: ";
-    cin >> s; //Value to be added to the existing location 
+    cin >> s; //Value to be added to the existing location
     a = stoi(s,nullptr,16);
     ifstream input("Relocation_input.txt");
     ofstream out("Relocation_output.txt");
