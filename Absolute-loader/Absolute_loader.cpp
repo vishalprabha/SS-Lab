@@ -20,7 +20,7 @@ int main(){
     int address;
     input >> x;
     if(x=="H"){
-        input >> x >> x >> x;
+        input >> x >> x >> x >>x;
     }
     while(x!="E"){
 
