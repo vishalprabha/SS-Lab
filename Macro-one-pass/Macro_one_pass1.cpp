@@ -24,9 +24,9 @@ int main()
   {
     string label,opcode,operand,newlabel,newoperand,macroname;
     int i,lines;
-    ifstream f1("Macro_input.txt");
-    ofstream f2("Macro_output.txt");
-    ofstream f3("Macro_deftab.txt");
+    ifstream f1("Macro_input.txt"); //input file
+    ofstream f2("Macro_output.txt"); // generated output file
+    ofstream f3("Macro_deftab.txt"); // generated output file 
     f1>>label>>opcode>>operand;
     while(opcode != "END")
     {
