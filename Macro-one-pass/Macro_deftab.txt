@@ -1,2 +1,2 @@
--	LDA	&A
--	STA	&B
+- LDA &A
+- STA &B
