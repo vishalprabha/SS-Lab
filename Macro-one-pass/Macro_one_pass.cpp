@@ -48,13 +48,13 @@ int main()
       }
       else if(strcmp(opcode,macroname)==0)
       {
-        printf("Lines = %d\n",lines);
+        //printf("Lines = %d\n",lines);
         if(strcmp(label,"**")!=0)
         fprintf(f2,"%s\t",label);
         for(i=0;i<lines;i++)
         {
           fprintf(f2,"%s\t%s\t%s\n",d[i].lab,d[i].opc,d[i].oper);
-          printf("DLAB = %s\nDOPC = %s\nDOPER = %s\n",d[i].lab,d[i].opc,d[i].oper);
+          //printf("DLAB = %s\nDOPC = %s\nDOPER = %s\n",d[i].lab,d[i].opc,d[i].oper);
         }
       }
       else
@@ -64,6 +64,6 @@ int main()
     fprintf(f2,"%s\t%s\t%s\n",label,opcode,operand);fclose(f1);
     fclose(f2);
     fclose(f3);
-    printf("FINISHED");
+    //printf("FINISHED");
     return 0;
   }

@@ -25,7 +25,7 @@ int main(){
     out << label << " " << opcode << " " << operand << endl;
     input >> address >> label >> opcode >> operand;
     while(opcode!="END"){
-        cout<<opcode<<endl;
+        //cout<<opcode<<endl;
         out << address << " " << label << " " << opcode << " " << operand << " ";
         if(opcode!="RESB" && opcode!="RESW" && opcode!="BYTE" && opcode!="WORD"){
             optab.clear();
