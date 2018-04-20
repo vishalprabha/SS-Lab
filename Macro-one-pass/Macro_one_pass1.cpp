@@ -4,7 +4,7 @@
 @Lab: System Software Lab
 Version 2.0 Improved from code Given by Mam
 **************************
-Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass.cpp
+Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass1.cpp
 */
 
 #include<iostream>
@@ -26,7 +26,7 @@ int main()
     int i,lines;
     ifstream f1("Macro_input.txt"); //input file
     ofstream f2("Macro_output.txt"); // generated output file
-    ofstream f3("Macro_deftab.txt"); // generated output file 
+    ofstream f3("Macro_deftab.txt"); // generated output file
     f1>>label>>opcode>>operand;
     while(opcode != "END")
     {

@@ -1,0 +1,40 @@
+/*
+**************************
+@Author: Vishal P
+@Lab: System Software Lab
+**************************
+Question: Develop a lex program to recognize a valid arithmetic expression and identify the
+identifiers and operators present.
+Note: Execute the following way:
+1. lex prog3.l
+2. gcc lex.yy.c
+3. ./a.out (a+b*(c/d))
+4. hit ctrl+z to exit 
+*/
+
+%{
+int stack=0, opd=0, opt=0, valid=1; //Definitions
+%}
+
+%%
+"(" {stack++;}
+")" {stack--; if(stack < 0) {valid=0;}} //Check for opening and closing brackets
+[a-zA-Z][a-zA-Z0-9]* {opd++; printf("%s is an operand\n",yytext);} //Rule for operand
+[+\-*/] {opt++; printf("%s is an operator\n",yytext);} //Rule for operator
+%%
+
+int yywrap(void){
+return 1;
+}
+
+int main(){
+    yylex();
+    if(stack==0 && valid==1 && opd - opt == 1) //Print valid if true
+    {
+        printf("Valid\n");
+    }
+    else{
+        printf("Invalid\n"); //Print false else
+    }
+    return 0;
+}
