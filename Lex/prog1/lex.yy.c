@@ -1755,9 +1755,11 @@ void yyfree (void * ptr )
 #line 22 "prog1.l"
 
 
+
 int yywrap(void){
 return 1;
 }
+
 int main(int argc, char*argv[]) //argv for taking input through arguments from command line
 {
     yyin=fopen(argv[1], "r"); // For reading input file

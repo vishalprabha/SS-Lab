@@ -735,7 +735,7 @@ case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
 #line 17 "prog2.l"
-{c++;} //Rule to increment comment line when "/*-----*/" encountered 
+{c++;} //Rule to increment comment line when "/*-----*/" encountered
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
@@ -1763,10 +1763,11 @@ int yywrap(void){
 return 1;
 }
 
-int main(int argc, char*argv[]){
-    yyin=fopen(argv[1], "r");
+int main(int argc, char*argv[]) //argv for taking input through arguments from command line
+{
+    yyin=fopen(argv[1], "r"); // For reading input file
     yylex();
-    printf("The number of comments is : %d\n", c);
+    printf("The number of comments is : %d\n", c); //Print number of comments 
     return 0;
 }
 
