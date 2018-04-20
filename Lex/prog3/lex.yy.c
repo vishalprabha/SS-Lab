@@ -461,10 +461,11 @@ Note: Execute the following way:
 1. lex prog3.l
 2. gcc lex.yy.c
 3. ./a.out (a+b*(c/d))
+4. hit ctrl+z to exit
 */
-#line 15 "prog3.l"
+#line 16 "prog3.l"
 int stack=0, opd=0, opt=0, valid=1; //Definitions
-#line 468 "lex.yy.c"
+#line 469 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -646,9 +647,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 18 "prog3.l"
+#line 19 "prog3.l"
 
-#line 652 "lex.yy.c"
+#line 653 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -733,30 +734,30 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 19 "prog3.l"
+#line 20 "prog3.l"
 {stack++;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 20 "prog3.l"
+#line 21 "prog3.l"
 {stack--; if(stack < 0) {valid=0;}} //Check for opening and closing brackets
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 21 "prog3.l"
+#line 22 "prog3.l"
 {opd++; printf("%s is an operand\n",yytext);} //Rule for operand
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "prog3.l"
-{opt++; printf("%s is an operator\n",yytext);} //Rule for operator 
+#line 23 "prog3.l"
+{opt++; printf("%s is an operator\n",yytext);} //Rule for operator
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 23 "prog3.l"
+#line 24 "prog3.l"
 ECHO;
 	YY_BREAK
-#line 760 "lex.yy.c"
+#line 761 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1753,7 +1754,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 23 "prog3.l"
+#line 24 "prog3.l"
 
 
 
@@ -1761,7 +1762,9 @@ int yywrap(void){
 return 1;
 }
 
-int main(){
+int main(int argc, char*argv[]) //argv for taking input through arguments from command line
+{
+    yyin=fopen(argv[1], "r"); // For reading input file
     yylex();
     if(stack==0 && valid==1 && opd - opt == 1) //Print valid if true
     {

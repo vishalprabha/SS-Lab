@@ -9,7 +9,7 @@ Note: Execute the following way:
 1. lex prog3.l
 2. gcc lex.yy.c
 3. ./a.out (a+b*(c/d))
-4. hit ctrl+z to exit 
+4. hit ctrl+z to exit
 */
 
 %{
@@ -27,7 +27,9 @@ int yywrap(void){
 return 1;
 }
 
-int main(){
+int main(int argc, char*argv[]) //argv for taking input through arguments from command line
+{
+    yyin=fopen(argv[1], "r"); // For reading input file
     yylex();
     if(stack==0 && valid==1 && opd - opt == 1) //Print valid if true
     {
