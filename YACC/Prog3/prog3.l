@@ -1,11 +1,3 @@
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a yacc program to evaluate an arithmetic expression involving operators +,-,* and /.
-*/
-
 %{
 #include "y.tab.h"
 %}
