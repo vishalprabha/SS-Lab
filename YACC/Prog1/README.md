@@ -8,11 +8,9 @@
 
 Note: Execute the following way:
 ```
-\$ lex prog1.l
-\$ yacc prog1.y -d
-\$ gcc lex.yy.c y.tab.c -ll
-'''
+$ lex prog1.l
+$ yacc prog1.y -d
+$ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
-'''
-\$ ./a.out
+$ ./a.out
 ```
