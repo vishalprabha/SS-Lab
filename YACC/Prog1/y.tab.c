@@ -80,12 +80,12 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 9 "prog1.y"
+#line 1 "prog1.y"
 
-int yylex();
-int yyerror(char *);
-#include<stdlib.h>
-#include<stdio.h>
+  #include<stdlib.h>
+  #include<stdio.h>
+  int yylex();
+
 
 
 /* Enabling traces.  */
@@ -403,7 +403,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    19,    19,    21,    22,    23,    24,    25,    26,    27
+       0,    11,    11,    13,    14,    15,    16,    17,    18,    19
 };
 #endif
 
@@ -1308,7 +1308,7 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 19 "prog1.y"
+#line 11 "prog1.y"
     {printf("Valid\n"); exit(0);}
     break;
 
@@ -1528,7 +1528,7 @@ yyreturn:
 }
 
 
-#line 29 "prog1.y"
+#line 21 "prog1.y"
 
 int yyerror(char * msg){
     printf("Invalid\n");
@@ -1536,7 +1536,6 @@ int yyerror(char * msg){
 }
 
 int main(){
-int yylex();
     yyparse();
     return 0;
 }

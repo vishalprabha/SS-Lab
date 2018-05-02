@@ -7,7 +7,7 @@ Question: Develop a yacc program to evaluate an arithmetic expression involving 
 */
 
 %{
-#include "y.tab.c"
+#include "y.tab.h"
 %}
 %%
 [0-9]+ {yylval=atoi(yytext); return NUMBER;}

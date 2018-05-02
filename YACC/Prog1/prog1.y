@@ -1,14 +1,4 @@
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
-*/
-
 %{
-  int yylex();
-  int yyerror(char *);
   #include<stdlib.h>
   #include<stdio.h>
 %}
@@ -33,7 +23,6 @@ int yyerror(char * msg){
 }
 
 int main(){
-    int yylex();
     yyparse();
     return 0;
 }

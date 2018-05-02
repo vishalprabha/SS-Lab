@@ -369,9 +369,10 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[11] =
+static yyconst flex_int16_t yy_accept[13] =
     {   0,
-        0,    0,    6,    4,    3,    1,    2,    1,    2,    0
+        0,    0,    6,    4,    3,    1,    2,    0,    1,    2,
+        1,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -380,16 +381,16 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
-        1,    1,    1,    1,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        1,    1,    1,    1,    4,    1,    4,    4,    4,    4,
+        1,    1,    1,    1,    1,    3,    1,    4,    4,    4,
+        4,    4,    4,    4,    4,    4,    4,    1,    1,    1,
+        1,    1,    1,    1,    5,    5,    5,    5,    5,    5,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        1,    1,    1,    1,    5,    1,    5,    5,    5,    5,
 
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    1,    1,    1,    1,    1,    1,    1,    1,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        5,    5,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -406,33 +407,33 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[5] =
+static yyconst flex_int32_t yy_meta[6] =
     {   0,
-        1,    1,    2,    3
+        1,    1,    1,    2,    3
     } ;
 
-static yyconst flex_int16_t yy_base[13] =
+static yyconst flex_int16_t yy_base[15] =
     {   0,
-        0,    0,    8,    9,    9,    0,    0,    0,    0,    9,
-        5,    3
+        0,    0,   11,   12,   12,    3,    0,    0,    0,    0,
+        0,   12,    6,    8
     } ;
 
-static yyconst flex_int16_t yy_def[13] =
+static yyconst flex_int16_t yy_def[15] =
     {   0,
-       10,    1,   10,   10,   10,   11,   12,   11,   12,    0,
-       10,   10
+       12,    1,   12,   12,   12,   12,   13,   14,    6,   13,
+       14,    0,   12,   12
     } ;
 
-static yyconst flex_int16_t yy_nxt[14] =
+static yyconst flex_int16_t yy_nxt[18] =
     {   0,
-        4,    5,    6,    7,    9,    9,    8,   10,    3,   10,
-       10,   10,   10
+        4,    5,    4,    6,    7,    8,    9,   10,   10,   11,
+       12,    3,   12,   12,   12,   12,   12
     } ;
 
-static yyconst flex_int16_t yy_chk[14] =
+static yyconst flex_int16_t yy_chk[18] =
     {   0,
-        1,    1,    1,    1,   12,   12,   11,    3,   10,   10,
-       10,   10,   10
+        1,    1,    1,    1,    1,    6,    6,   13,   13,   14,
+        3,   12,   12,   12,   12,   12,   12
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -450,16 +451,9 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "prog1.l"
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
-*/
-#line 11 "prog1.l"
-#include "y.tab.c"  //Definition
-#line 463 "lex.yy.c"
+#line 2 "prog1.l"
+#include "y.tab.h"
+#line 457 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -641,9 +635,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 13 "prog1.l"
+#line 4 "prog1.l"
 
-#line 647 "lex.yy.c"
+#line 641 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -696,13 +690,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 11 )
+				if ( yy_current_state >= 13 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 9 );
+		while ( yy_base[yy_current_state] != 12 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -728,31 +722,31 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 14 "prog1.l"
+#line 5 "prog1.l"
 {return NUMBER;} //Return if number
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 15 "prog1.l"
+#line 6 "prog1.l"
 {return ID;} //Return if identifier
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 16 "prog1.l"
+#line 7 "prog1.l"
 {return NL;} //Return if newline
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "prog1.l"
+#line 8 "prog1.l"
 {return yytext[0];} //Return text otherwise
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 18 "prog1.l"
+#line 9 "prog1.l"
 ECHO;
 	YY_BREAK
-#line 756 "lex.yy.c"
+#line 750 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1044,7 +1038,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 11 )
+			if ( yy_current_state >= 13 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1072,11 +1066,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 11 )
+		if ( yy_current_state >= 13 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 10);
+	yy_is_jam = (yy_current_state == 12);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1749,11 +1743,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 18 "prog1.l"
+#line 9 "prog1.l"
 
 
-int yywrap(void)
-{
-return 1;
-}
 

@@ -5,7 +5,10 @@
 **************************
 Question: Develop a yacc program to evaluate an arithmetic expression involving operators +,-,* and /.
 */
-
+%{
+  #include<stdio.h>
+  #include<stdlib.h>
+%}
 %token NUMBER NL
 %left '+' '-'
 %left '*' '/'

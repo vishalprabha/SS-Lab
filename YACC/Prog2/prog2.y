@@ -6,7 +6,10 @@
 Question: Develop a yacc program to recognize a valid variable, which starts with a letter, followed by any number of
 letters or digits.
 */
-
+%{
+  #include<stdio.h>
+  #include<stdlib.h>
+%}
 %token DIGIT LETTER NL UND
 %%
   stmt : var NL {printf("Valid\n"); exit(0);}
