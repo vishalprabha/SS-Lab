@@ -1,7 +1,7 @@
 ### Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
 
-** @Author: Vishal P
- @Lab: System Software Lab **
+**@Author: Vishal P**
+**@Lab: System Software Lab**
 
 > Note: Execute the following way:
 
