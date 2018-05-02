@@ -1,4 +1,4 @@
-### Question: Develop a lex program to count the number of characters, words, spaces and lines in a given input file.
+### Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
 
 **************************
 > @Author: Vishal P
