@@ -12,4 +12,6 @@ $ yacc prog3.y -d
 $ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
 $ ./a.out
+2+3
+Value is 5
 ```

@@ -12,4 +12,9 @@ $ yacc prog1.y -d
 $ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
 $ ./a.out
+a+b
+Valid
+$ ./a.out
+a++b
+Invalid 
 ```

@@ -10,7 +10,16 @@
 ```
 $ lex prog4.l
 $ yacc prog4.y -d
+> Ignore the "conflicts: 3 reduce/reduce"
 $ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
 $ ./a.out
+a
+Valid
+$ ./a.out
+ab
+Valid
+$ ./a.out
+ccd
+Invalid
 ```
