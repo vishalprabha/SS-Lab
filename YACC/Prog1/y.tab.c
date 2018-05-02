@@ -84,8 +84,6 @@
 
   #include<stdlib.h>
   #include<stdio.h>
-  int yylex();
-
 
 
 /* Enabling traces.  */
@@ -119,7 +117,7 @@ typedef int YYSTYPE;
 
 
 /* Line 216 of yacc.c.  */
-#line 123 "y.tab.c"
+#line 121 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -334,7 +332,7 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  7
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   21
+#define YYLAST   25
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  12
@@ -403,7 +401,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    11,    11,    13,    14,    15,    16,    17,    18,    19
+       0,     7,     7,     9,    10,    11,    12,    13,    14,    15
 };
 #endif
 
@@ -456,17 +454,17 @@ static const yytype_int8 yydefgoto[] =
 
 /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
    STATE-NUM.  */
-#define YYPACT_NINF -8
+#define YYPACT_NINF -4
 static const yytype_int8 yypact[] =
 {
-       0,    -8,    -8,     0,    15,    12,     5,    -8,    -8,     0,
-       0,     0,     0,    -8,    -7,    -7,    -8,    -8
+       0,    -4,    -4,     0,     1,    12,     5,    -4,    -4,     0,
+       0,     0,     0,    -4,    16,    16,    16,    16
 };
 
 /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -8,    -8,    -3
+      -4,    -4,    -3
 };
 
 /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
@@ -476,16 +474,16 @@ static const yytype_int8 yypgoto[] =
 #define YYTABLE_NINF -1
 static const yytype_uint8 yytable[] =
 {
-       6,    11,    12,     1,     2,     0,    14,    15,    16,    17,
-       3,     9,    10,    11,    12,     7,    13,     8,     9,    10,
-      11,    12
+       6,     7,     0,     1,     2,     0,    14,    15,    16,    17,
+       3,     9,    10,    11,    12,     0,    13,     8,     9,    10,
+      11,    12,     9,    10,    11,    12
 };
 
 static const yytype_int8 yycheck[] =
 {
-       3,     8,     9,     3,     4,    -1,     9,    10,    11,    12,
-      10,     6,     7,     8,     9,     0,    11,     5,     6,     7,
-       8,     9
+       3,     0,    -1,     3,     4,    -1,     9,    10,    11,    12,
+      10,     6,     7,     8,     9,    -1,    11,     5,     6,     7,
+       8,     9,     6,     7,     8,     9
 };
 
 /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -1308,13 +1306,13 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 11 "prog1.y"
+#line 7 "prog1.y"
     {printf("Valid\n"); exit(0);}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1318 "y.tab.c"
+#line 1316 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1528,7 +1526,7 @@ yyreturn:
 }
 
 
-#line 21 "prog1.y"
+#line 17 "prog1.y"
 
 int yyerror(char * msg){
     printf("Invalid\n");

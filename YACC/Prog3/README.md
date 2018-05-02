@@ -1,4 +1,4 @@
-### Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
+### Question: Develop a yacc program to evaluate an arithmetic expression involving operators +,-,* and /.
 
 **@Author: Vishal P**
 
@@ -7,8 +7,8 @@
 > Note: Execute the following way:
 
 ```
-$ lex prog1.l
-$ yacc prog1.y -d
+$ lex prog3.l
+$ yacc prog3.y -d
 $ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
 $ ./a.out

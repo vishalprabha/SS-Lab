@@ -1,4 +1,5 @@
-### Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
+### Question: Develop a yacc program to recognize the strings of the form ambn, where m>=0,n>=0.
+
 
 **@Author: Vishal P**
 
@@ -7,8 +8,8 @@
 > Note: Execute the following way:
 
 ```
-$ lex prog1.l
-$ yacc prog1.y -d
+$ lex prog4.l
+$ yacc prog4.y -d
 $ gcc lex.yy.c y.tab.c -ll
 > Ignore the warning
 $ ./a.out
