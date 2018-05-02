@@ -1,9 +1,10 @@
 ### Question: Develop a yacc program to recognize a valid arithmetic expression that uses operators + ,- ,* and /.
 
-> @Author: Vishal P
-> @Lab: System Software Lab
+** @Author: Vishal P
+ @Lab: System Software Lab **
 
-Note: Execute the following way:
+> Note: Execute the following way:
+
 ```
 $ lex prog1.l
 $ yacc prog1.y -d
