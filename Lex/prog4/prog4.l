@@ -1,15 +1,3 @@
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a lex Program to recognize and count the number of identifiers in a given input file.
-Note: Execute the following way:
-1. lex prog4.l
-2. gcc lex.yy.c
-3. ./a.out test.txt
-*/
-
 %{
 int c=0; //Definition
 %}

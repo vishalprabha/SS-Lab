@@ -465,20 +465,9 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "prog4.l"
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a lex Program to recognize and count the number of identifiers in a given input file.
-Note: Execute the following way:
-1. lex prog4.l
-2. gcc lex.yy.c
-3. ./a.out test.txt
-*/
-#line 14 "prog4.l"
+#line 2 "prog4.l"
 int c=0; //Definition
-#line 482 "lex.yy.c"
+#line 471 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -660,9 +649,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 17 "prog4.l"
+#line 5 "prog4.l"
 
-#line 666 "lex.yy.c"
+#line 655 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -747,31 +736,31 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "prog4.l"
+#line 6 "prog4.l"
 {printf("%s is an keyword\n",yytext);} //Rule for checking if keyword
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 19 "prog4.l"
+#line 7 "prog4.l"
 {printf("%s is an identifier\n",yytext); c++;} //Rule for an identifer
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 20 "prog4.l"
+#line 8 "prog4.l"
 {printf("%s is an not an identifer\n",yytext);} //Rule for other characters not an identifer
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 21 "prog4.l"
+#line 9 "prog4.l"
 {;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 22 "prog4.l"
+#line 10 "prog4.l"
 ECHO;
 	YY_BREAK
-#line 775 "lex.yy.c"
+#line 764 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1768,7 +1757,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 22 "prog4.l"
+#line 10 "prog4.l"
 
 
 

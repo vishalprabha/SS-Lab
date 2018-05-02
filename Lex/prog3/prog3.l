@@ -1,17 +1,3 @@
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a lex program to recognize a valid arithmetic expression and identify the
-identifiers and operators present.
-Note: Execute the following way:
-1. lex prog3.l
-2. gcc lex.yy.c
-3. ./a.out (a+b*(c/d))
-4. hit ctrl+z to exit
-*/
-
 %{
 int stack=0, opd=0, opt=0, valid=1; //Definitions
 %}

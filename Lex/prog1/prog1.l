@@ -1,16 +1,4 @@
-/*
-**************************
-@Author: Vishal P
-@Lab: System Software Lab
-**************************
-Question: Develop a lex program to count the number of characters, words, spaces and lines in a given input file.
-Note: Execute the following way:
-1. lex prog1.l
-2. gcc lex.yy.c
-3. ./a.out test.txt
-*/
-
-%{
+{
 
 int l=0, c=0, w=0, s=0; //Definitions
 %}
