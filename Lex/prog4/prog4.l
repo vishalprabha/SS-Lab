@@ -5,7 +5,7 @@ int c=0; //Definition
 %%
 "printf"|"scanf"|"int"|"float" {printf("%s is an keyword\n",yytext);} //Rule for checking if keyword
 [a-zA-Z_][a-zA-Z0-9_]* {printf("%s is an identifier\n",yytext); c++;} //Rule for an identifer
-.* {printf("%s is an not an identifer\n",yytext);} //Rule for other characters not an identifer
+.* {printf("%s is not an identifer\n",yytext);} //Rule for other characters not an identifer
 \n {;}
 %%
 
