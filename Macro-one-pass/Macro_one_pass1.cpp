@@ -7,8 +7,8 @@ Version 2.0 Improved from code Given by Mam
 Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass1.cpp
 */
 
-
-// Create Arg_tab.txt file before executing the program
+//Create empty Macro_deftab.txt file before executing the program
+// Create empty Arg_tab.txt file before executing the program
 #include<iostream>
 # include <stdio.h>
 # include <string.h>
