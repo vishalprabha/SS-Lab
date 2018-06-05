@@ -2,7 +2,6 @@
 **************************
 @Author: Vishal P
 @Lab: System Software Lab
-Version 2.0 Improved from code Given by Mam
 **************************
 Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass1.cpp
 */

@@ -2,33 +2,32 @@
 **************************
 @Author: Vishal P
 @Lab: System Software Lab
-Version 2.0 Improved from the code of Niranjan-Ananth
 **************************
 Note: Incase of error in lab execute : $ g++ --std=c++11 Pass_one_assembler.cpp
 */
 
 
-#include<iostream> //For Basic I/O operations
-#include<cstring> //For string operations
-#include<cstdlib> //For stoi
-#include<fstream> //For file operations
+#include<iostream>
+#include<string>
+#include<stdlib.h>
+#include<fstream>
 
 
 using namespace std;
 
 int main(){
 
-    ifstream input("Pass_one_input.txt"); //Code input for One Pass
-    ifstream optab("Pass_one_optab.txt"); //Optab input (without code values)
-    ofstream out("Pass_one_output.txt"); //File with generated output
-    ofstream symtab("Pass_one_symtab.txt"); // File with generated symtab
+    ifstream input("input.txt");
+    ifstream optab("Pass_one_optab.txt");
+    ofstream out("Pass_one_output.txt");
+    ofstream symtab("Pass_one_symtab.txt");
     string label, opcode, operand, code;
     int startAddress = 0, locationPointer;
 
     input >> label >> opcode >> operand;
     if(opcode == "START"){
-        startAddress = stoi(operand,nullptr,16); //stoi returns the integer value in a given string, 16 means HEX value
-        out << hex << startAddress << " "<< label << " " << opcode << " " << operand << endl; //hex used to output HEX values
+        startAddress = stoi(operand,nullptr,16);
+        out << hex << startAddress << " "<< label << " " << opcode << " " << operand << endl;
         input >> label >> opcode >> operand;
     }
 
@@ -55,11 +54,11 @@ int main(){
             locationPointer += 3*stoi(operand);
         else if(opcode == "BYTE")
             {
-               if (operand[0]== 'C') //Checking for whether C or X after BYTE
+               if (operand[0]== 'C')
                  locationPointer += operand.length() - 3;
                else
                {
-                 if((operand.length()-3)%2 == 0) //Done incase we have 3HEX Values in input
+                 if((operand.length()-3)%2 == 0)
                  locationPointer += (operand.length()-3)/2;
                  else locationPointer += ((operand.length()-3)/2)+1;
                }
@@ -69,6 +68,6 @@ int main(){
 
         input >> label >> opcode >> operand;
     }
-    out << hex << locationPointer << " "<< label << " " << opcode << " " << operand << endl; //Added for END line
+    out << hex << locationPointer << " "<< label << " " << opcode << " " << operand << endl;
     return 0;
 }
