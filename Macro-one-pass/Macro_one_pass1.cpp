@@ -8,27 +8,20 @@ Note: Incase of error in lab execute : $ g++ --std=c++11 Macro_one_pass1.cpp
 */
 
 
-// Create Arg_tab.txt file before executing the program 
+// Create Arg_tab.txt file before executing the program
 #include<iostream>
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 #include<fstream>
 using namespace std;
-struct deftab
-  {
-    string label;
-    string opcode;
-    string operand;
-  }d[10];
-
 int main()
   {
-    string label,opcode,operand,newlabel,newoperand,macroname,ex;
+    string label,opcode,operand,newlabel,newoperand,newopcode,macroname,ex;
     int i,lines;
     ifstream f1("Macro_input.txt");
     ofstream f2("Macro_output.txt");
-    ofstream f3("Macro_deftab.txt");
+    fstream f3("Macro_deftab.txt");
 
     f1>>label>>opcode>>operand;
     while(opcode != "END")
@@ -41,9 +34,6 @@ int main()
         while(opcode != "MEND")
         {
           f3<<label<<" "<<opcode<<" "<<operand<<endl;
-          d[lines].label =label;
-          d[lines].opcode = opcode;
-          d[lines].operand = operand;
           f1>>label>>opcode>>operand;
           lines++;
         }
@@ -63,17 +53,20 @@ int main()
           ar = strtok(NULL, ",");
         }
         f4.seekg(0,ios::beg);
+        f3.seekg(0,ios::beg);
         f4>>ex;
+        f3>>newlabel>>newopcode>>newoperand;
         for(i=0;i<lines;i++)
         {
-          if(d[i].operand[0]=='&')
+          if(newoperand[0]=='&')
           {
-          f2<<d[i].label<<" "<<d[i].opcode<<" "<<ex<<endl;
+          f2<<newlabel<<" "<<newopcode<<" "<<ex<<endl;
           f4>>ex;
+          f3>>newlabel>>newopcode>>newoperand;
           }
           else
-          f2<<d[i].label<<" "<<d[i].opcode<<" "<<d[i].operand<<endl;
-
+          f2<<newlabel<<" "<<newopcode<<" "<<newoperand<<endl;
+          f3>>newlabel>>newopcode>>newoperand;
         }
       }
       else
