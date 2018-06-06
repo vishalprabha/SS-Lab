@@ -1,21 +1,21 @@
 %{
-int c=0; //Definitions
+int c=0;
 %}
 %%
-"/*"[^("*/")]+"*/" {c++;} //Rule to increment comment line when "/*-----*/" encountered
-"//" {c++;} //Rule to increment comment line when "//" encountered
-. {;} //Rule to ignore other characters
-[\n] {;} //Rule to ignore newline
+"/*"[^("*/")]+"*/" {c++;}
+"//" {c++;}
+. {;}
+[\n] {;}
 %%
 
 int yywrap(void){
 return 1;
 }
 
-int main(int argc, char*argv[]) //argv for taking input through arguments from command line
+int main(int argc, char*argv[])
 {
-    yyin=fopen(argv[1], "r"); // For reading input file
+    yyin=fopen(argv[1], "r");
     yylex();
-    printf("The number of comments is : %d\n", c); //Print number of comments
+    printf("The number of comments is : %d\n", c); 
     return 0;
 }

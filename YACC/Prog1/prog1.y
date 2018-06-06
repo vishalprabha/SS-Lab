@@ -2,7 +2,7 @@
   #include<stdlib.h>
   #include<stdio.h>
 %}
-%token ID NUMBER NL //Declarations
+%token ID NUMBER NL 
 %left '+' '-'
 %left '*' '/'
 %% //Rules
