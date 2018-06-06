@@ -8,9 +8,9 @@ Note: Incase of error in lab execute : $ g++ --std=c++11 Absolute_loader.cpp
 */
 
 
-#include<iostream> //For Basic I/O operations
-#include<fstream> //For file operations
-#include<cstdlib> //For stoi
+#include<iostream>
+#include<fstream>
+#include<stdlib.h> 
 using namespace std;
 
 int main(){

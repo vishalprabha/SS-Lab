@@ -8,17 +8,17 @@ Note: Incase of error in lab execute : $ g++ --std=c++11 Relocation_loader.cpp
 */
 
 
-#include<iostream> //For Basic I/O operations
-#include<fstream> //For file operations
-#include<string> //For string operations
-#include<bitset> //For bitset
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<bitset>
 using namespace std;
 
 int main(){
     int a;
     string s;
     cout<<"Enter the starting address: ";
-    cin >> s; //Value to be added to the existing location
+    cin >> s; 
     a = stoi(s,nullptr,16);
     ifstream input("Relocation_input.txt");
     ofstream out("Relocation_output.txt");
